@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    user-select: none;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100dvh;
+  }
+  
+  /* Style the header */
+  .header {
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    justify-content: center;
+  }
+  
+  .header-box {
+    padding: 32px;
+    width: 100%;
+    position: relative;
+    z-index: -100;
+  }
+  
+  .divider-box {
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .page-break {
+    position: relative;
+    text-align: center;
+    padding: 25px;
+    height: 250px;
+    width: 100%;
+    z-index: -10;
+  }
+  
+  /* position */
+  
+  .relative {
+    position: relative;
+  }
+  
+  /* navbar styling */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    max-width: 1200px;
+    height: 80px;
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgba(139, 139, 148, 0.04);
+    z-index: 100;
+    position: sticky;
+  }
+  
+  nav .nav-list {
+    display: flex;
+  }
+  
+  nav .nav-item {
+    line-height: 70px;
+  }
+  
+  .btn {
+    cursor: pointer;
+    padding: 18px 24px;
+    margin: auto 0;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    right: 10px;
+  }
+  
+  .active-btn {
+    padding: 18px 24px;
+    margin: auto 0;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    right: 10px;
+    background: rgba(243, 112, 90, 1);
+    z-index: 10;
+  }
+  
+  .radio-display {
+    display: none;
+  }
+  
+  .btn .btn-icon {
+    color: #6374F2;
+    font-size: 1em;
+    transform: translateX(100%);
+    transition: all .3s;
+    /* display: none; */
+  }
+  
+  .btn .btn-icon:hover {
+    color: rgba(243, 112, 90, 1);
+    font-size: 2em;
+  }
+  
+  .btn .btn-icon:hover~.btn-text {
+    /* increase size of icon whilst making the text disappear */
+    font-size: 1.1em;
+    opacity: 0;
+  }
+  
+  .btn .btn-text {
+    color: slategray;
+    font-family: Roboto;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: all .2s;
+  }
+  
+  span a {
+    text-decoration: none;
+    color: slategray;
+  }
+  
+  .btn .active-text {
+    color: #f1f1f1;
+  }
+  
+  .btn .active-icon {
+    display: none;
+  }
+  
+  /* input:checked~.btn {
+    cursor: default;
+    background: rgba(255, 255, 255, 0);
+  
+  } */
+  
+  #logo {
+    position: relative;
+    justify-content: space-between;
+    width: 80px;
+    margin: auto;
+    left: 10px;
+    display: block
+  }
+  
+  /* column layout */
+  .column-height {
+    height: 900px;
+  }
+  
+  /* Create equal columns */
+  .column {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  /* Create unequal column */
+  .column-unequal {
+    flex: 3;
+    padding: 10px;
+  }
+  
+  /* row layout */
+  .row {
+    display: flex;
+  }
+  
+  /* column color primary */
+  .color-prime {
+    background-color: rgba(99, 116, 242, 1);
+  }
+  
+  /* column color secondary */
+  .color-second {
+    background-color: #42526e;
+  
+  }
+
+  
+  @media screen and (max-width: 700px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* .mobile-responsive {
+      display: none;
+    } */
+
+    .active-text {
+        display: none;
+    }
+
+    .btn .active-icon {
+        display: inline;
+        color: #f1f1f1;
+      }
+  
+    nav .nav-list {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: rgb(251, 247, 247);
+      border-radius: 0 0 10px 10px;
+    }
+
+    nav:has(#input-6:checked) .nav-list {
+        display: block;
+    }
+  }
