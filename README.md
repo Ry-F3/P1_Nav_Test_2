@@ -4,7 +4,7 @@ This repository contains a prototype for a navigation design created using HTML 
 
 ## Live Demo
 
-You can view the live deployment of this prototype on GitHub Pages [here](https://your-username.github.io/navigation-idea-prototype/).
+You can view the live deployment of this prototype on GitHub Pages [here](https://ry-f3.github.io/P1_Nav_Test_2/).
 
 ## Features
 
